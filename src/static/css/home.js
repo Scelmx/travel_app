@@ -77,6 +77,7 @@ var homeCss = StyleSheet.create({
         alignSelf: 'center',
         backgroundColor: '#000',
         borderRadius: 100,
+        overflow: 'hidden'
     }
 })
 

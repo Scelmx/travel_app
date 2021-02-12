@@ -5,7 +5,7 @@ import baseCss from '../static/css/bese';
 export default class order extends React.Component{
     constructor (prop) {
         super(prop),
-        state = {
+        this.state = {
             orderOpt: ['全部', '待付款', '待出行', '处理中', '待评价']
         }
     }

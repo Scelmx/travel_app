@@ -45,7 +45,7 @@ class home extends React.Component {
                                 <Text style = { HomeCss.big_desc }>xxxxx</Text>
                             </View>
                             <View style = { HomeCss.big_img }>
-                                {/* <Image></Image> */}
+                                <Image resizeMode="contain" source={require('../static/images/login_bg.png')}></Image>
                             </View>
                         </View>
                     </View>

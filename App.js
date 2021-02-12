@@ -24,12 +24,34 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import Login from './src/view/login'
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import LoginScreen from './src/view/login';
+import HomeScreen from './src/view/home';
+import TabNavScreen from './src/router/tab';
+import FDetailScreen from './src/view/find/findDetail';
+import TripDetailScreen from './src/view/trip/tripDetails';
+const Stack = createStackNavigator();
 
-const App: () => React$Node = () => {
+function jump (nav, url) {
+  nav.push(url)
+}
+
+export default function App() {
   return (
-    <Login/>
-  );
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }}></Stack.Screen>
+          <Stack.Screen name="TabNav" component={TabNavScreen} options={{ headerShown: false }}></Stack.Screen>
+          <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }}></Stack.Screen>
+          <Stack.Screen name="FDetail" component={FDetailScreen}></Stack.Screen>
+          <Stack.Screen name="TripDetail" component={TripDetailScreen}></Stack.Screen>
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
+  )
 };
 
 const styles = StyleSheet.create({
@@ -70,5 +92,3 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
 });
-
-export default App;

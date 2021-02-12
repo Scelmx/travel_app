@@ -26,7 +26,7 @@ class login extends React.Component{
             btnName: "登录"
         })
         if(this.state.btnName === "登录") {
-            
+            this.props.navigation.push('TabNav')
         }
     }
     login = () => {
