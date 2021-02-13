@@ -12,8 +12,7 @@ const http = {
         })
     }
 }
-const jump = (nav, url) => {
-    console.log(111);
+function jump(nav, url) {
     nav.push(url)
 }
 

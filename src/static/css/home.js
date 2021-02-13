@@ -40,8 +40,27 @@ var homeCss = StyleSheet.create({
     },
     small_btn_list: {
         display: 'flex',
+        flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
+        width: '100%',
+        marginBottom: 15
+    },
+    icon_btn: {
+        // flex: 1,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        // backgroundColor: '#ccc'
+    },  
+    icon: {
+        height: 40, 
+        width: 50
+    },
+    icon_text: {
+        textAlign: 'center',
+        marginTop: 5
     },
     big_btn_list: {
         display: 'flex',
@@ -65,19 +84,34 @@ var homeCss = StyleSheet.create({
         overflow: 'hidden'
     },
     big_title: {
-        fontSize: 16,
+        fontSize: 18,
         fontWeight: 'bold',
     },
     big_desc: {
+        fontSize: 10,
+        marginTop: 5,
         color: '#a4a4a4',
+        width: 80
     },
     big_img: {
+        height: 50,
+        width: 50,
+        alignSelf: 'center',
+        borderRadius: 25,
+        overflow: 'hidden'
+    },
+    yx_img: {
         height: 66,
         width: 66,
-        alignSelf: 'center',
-        backgroundColor: '#000',
-        borderRadius: 100,
-        overflow: 'hidden'
+    },
+    menu_tab: {
+        borderRadius: 20,
+        backgroundColor: '#fff',
+        display: 'flex', 
+        justifyContent: 'space-between',
+        paddingLeft: '4%',
+        paddingRight: '4%',
+        paddingTop: 15
     }
 })
 

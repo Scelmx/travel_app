@@ -32,6 +32,10 @@ import HomeScreen from './src/view/home';
 import TabNavScreen from './src/router/tab';
 import FDetailScreen from './src/view/find/findDetail';
 import TripDetailScreen from './src/view/trip/tripDetails';
+import OrderScreen from './src/view/order';
+import ReleaseScreen from './src/view/release';
+import TravelScreen from './src/view/travel/travel';
+
 const Stack = createStackNavigator();
 
 function jump (nav, url) {
@@ -48,6 +52,11 @@ export default function App() {
           <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }}></Stack.Screen>
           <Stack.Screen name="FDetail" component={FDetailScreen}></Stack.Screen>
           <Stack.Screen name="TripDetail" component={TripDetailScreen}></Stack.Screen>
+          <Stack.Screen name="Order" component={OrderScreen} options={{ headerShown: false }}></Stack.Screen>
+          <Stack.Screen name="Release" component={ReleaseScreen} options={{ title: '我的发布', headerStyle: {
+            backgroundColor: '#f68710',
+          }, headerTintColor: '#fff', headerTitleAlign: 'center' }}></Stack.Screen>
+          <Stack.Screen name="Travel" component={TravelScreen} options={{ headerShown: false }}></Stack.Screen>
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, TextInput, FlatList, Text, View, Button, Image, ImageBackground } from 'react-native';
+import { StatusBar, TextInput, FlatList, Text, View, Button, Image, ImageBackground, TouchableWithoutFeedback } from 'react-native';
 import baseCss from '../static/css/bese';
 import iconSetting from '../static/images/setting.jpg';
 import mineBg from '../static/images/mine_bg.jpg';
@@ -10,30 +10,36 @@ export default class mine extends React.Component{
         super(prop),
         this.state = {
             orderOpt: [
-                { id: 1, title: '待付款' },
-                { id: 2, title: '待出行' },
-                { id: 3, title: '处理中' },
-                { id: 4, title: '待评价' },
-                { id: 5, title: '待退款' }
+                { id: 1, title: '待付款', img: require('../static/icon/to_be_paid.jpg') },
+                { id: 2, title: '待出行', img: require('../static/icon/waiting_to_travel.jpg') },
+                { id: 3, title: '处理中', img: require('../static/icon/process.jpg') },
+                { id: 4, title: '待评价', img: require('../static/icon/assess.jpg') },
+                { id: 5, title: '待退款', img: require('../static/icon/refund.jpg') }
             ],
             myOpt: [
-                { id: 6, title: '收藏' },
-                { id: 7, title: '历史' },
-                { id: 8, title: '我的发布' },
-                { id: 9, title: '关注' },
-                { id: 10, title: '红包卡券' },
-                { id: 11, title: '个性化' },
-                { id: 12, title: '足迹记录' },
-                { id: 13, title: '订单记录' }
+                { id: 6, title: '收藏', img: require('../static/icon/collection.jpg') },
+                { id: 7, title: '历史', img: require('../static/icon/history.jpg') },
+                { id: 8, title: '我的发布', img: require('../static/icon/release.jpg') },
+                { id: 9, title: '关注', img: require('../static/icon/release.jpg') },
+                { id: 10, title: '红包卡券', img: require('../static/icon/red_packet.jpg') },
+                { id: 11, title: '个性化', img: require('../static/icon/release.jpg') },
+                { id: 12, title: '足迹记录', img: require('../static/icon/footprint.jpg') },
+                { id: 13, title: '订单记录', img: require('../static/icon/order.jpg') }
             ]
         }
     }
+    jump = (nav, routeName) => {
+        console.log(111)
+        nav.push(routeName)
+    }
     renderOrder = ({item}) => {
         return (
-            <View>
-                {/* <Image resizeMode="contain" source={item.icon}></Image> */}
-                <Text style={{ textAlign: 'center' }}>{item.title}</Text>
-            </View>
+            <TouchableWithoutFeedback  onPress={ ()=> this.jump(this.props.navigation, 'Order') }>
+                <View style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                    <Image style={{ width: 30, height: 30 }} resizeMode="contain" source={item.img}></Image>
+                    <Text style={{ textAlign: 'center', marginTop: 5 }}>{item.title}</Text>
+                </View>
+            </TouchableWithoutFeedback>
         )
     }
     render () {
@@ -65,18 +71,17 @@ export default class mine extends React.Component{
                             </View>
                             <View style = { baseCss.card }>
                             {/* // 订单卡片 */}
-                            <View style={{ borderRadius: 20, height: 80, backgroundColor: '#fff' }}>
+                            <View style={{ borderRadius: 20, height: 100, backgroundColor: '#fff' }}>
                                 <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingLeft: 10, paddingRight: 10, paddingTop: 5, borderBottomWidth: 1, paddingBottom: 5, borderBottomColor: '#eee' }}>
                                     <Text style={{ fontWeight: 'bold' }}>我的订单</Text>
-                                    <Text onPress={ () => {  } } style={{ color: '#868686' }}>查看全部订单></Text>
+                                    <Text onPress={ () => { this.jump(this.props.navigation, 'Release') } } style={{ color: '#868686' }}>查看全部订单></Text>
                                 </View>
                                 <FlatList
-                                    style={{ width: '100%' }}
                                     data = { this.state.orderOpt }
                                     renderItem={ this.renderOrder }
                                     keyExtractor={item => item.id}
                                     numColumns={ 5 }
-                                    columnWrapperStyle = {{display: 'flex', justifyContent: 'space-between', paddingLeft: 10, paddingRight: 10 }}
+                                    columnWrapperStyle = {{display: 'flex', justifyContent: 'space-between', paddingLeft: 10, paddingRight: 10, height: 70 }}
                                 >
                                 </FlatList>
                             </View>
@@ -85,12 +90,12 @@ export default class mine extends React.Component{
                         <View style = {{ overflow: 'hidden' }}>
                             <Image style = {{ width: '100%' }}  resizeMode="contain" source={require('../static/images/mine_banner.jpg')}></Image>
                         </View>
-                        <View style = {{ borderRadius: 20, height: 160, backgroundColor: '#fff' }}>
+                        <View>
                             {/* // 工具卡片 */}
-                            <View>
+                            <View  style = {{ borderRadius: 20, height: 160, backgroundColor: '#fff' }}>
                                 <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingLeft: 10, paddingRight: 10, paddingTop: 5, borderBottomWidth: 1, paddingBottom: 5, borderBottomColor: '#eee' }}>
                                     <Text style={{ fontWeight: 'bold' }}>我的工具</Text>
-                                    <Text onPress={ () => {  } } style={{ color: '#868686' }}>更多工具></Text>
+                                    <Text onPress={ () => { this.jump(this.props.navigation, 'Release') } } style={{ color: '#868686' }}>更多工具></Text>
                                 </View>
                                 <FlatList 
                                     data = { this.state.myOpt }
