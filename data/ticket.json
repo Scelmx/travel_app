@@ -1,0 +1,94 @@
+[
+    {
+        "id": 1,
+        "startDate": "06月01日",
+        "startTime": "7:10",
+        'start': '成都站',
+        'takeUpTime': '1时33分',
+        'trainNumber': 'G8603',
+        'trainName': '复兴号',
+        "endDate": "06月01日",
+        'endTime': '08:43',
+        'end': '重庆北站',
+        'price': 161, // 二等票
+        "orderSeat": [
+            { "title": "站票", "price": 134 },
+            { "title": "二等票", "price": 134 },
+            { "title": "一等票", "price": 161 }
+        ],
+        "type": "高铁"
+    },
+    {
+        'id': 2,
+        'startTime': '7:30',
+        'start': '成都东站',
+        'takeUpTime': '1时58分',
+        'trainNumber': 'G1755',
+        'trainName': '',
+        'endTime': '09:28',
+        'end': '重庆北站',
+        'price': 136,
+        'type': '高铁'
+    },
+    
+    {
+        'id': 3,
+        'startTime': '07:41',
+        'start': '成都东站',
+        'takeUpTime': '2时24分',
+        'trainNumber': 'D1812',
+        'trainName': '',
+        'endTime': '10:05',
+        'end': '重庆北站',
+        'price': 96,
+        'type': '动车'
+    },
+    {
+        'id': 4,
+        'startTime': '08:56',
+        'start': '成都东站',
+        'takeUpTime': '1时54分',
+        'trainNumber': 'D362',
+        'trainName': '',
+        'endTime': '10:50',
+        'end': '重庆北站',
+        'price': 96.5,
+        'type': '动车'
+    },
+    {
+        'id': 5,
+        'startTime': '09:09',
+        'start': '成都东站',
+        'takeUpTime': '2时03分',
+        'trainNumber': 'D2264',
+        'trainName': '',
+        'endTime': '11:12',
+        'end': '重庆北站',
+        'price': 96.5,
+        'type': '动车'
+    },
+    {
+        'id': 6,
+        'startTime': '11:40',
+        'start': '成都东站',
+        'takeUpTime': '1时29分',
+        'trainNumber': 'G0718',
+        'trainName': '和谐号',
+        'endTime': '13:09',
+        'end': '重庆西站',
+        'price': 121,
+        'type': '高铁'
+    },
+    {
+        'id': 7,
+        'startTime': '12:30',
+        'start': '成都东站',
+        'takeUpTime': '1时06分',
+        'trainNumber': 'G07621',
+        'trainName': '复兴号',
+        'endTime': '13:36',
+        'end': '重庆西',
+        'price': 145,
+        'type': '高铁'
+    }
+]

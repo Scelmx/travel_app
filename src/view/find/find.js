@@ -3,6 +3,7 @@ import { View, Text, FlatList, Image, TouchableNativeFeedback } from 'react-nati
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Input } from 'react-native-elements';
 import http from '../../util/http';
+import SearchInput from '../../component/searchInput';
 
 let nav;
 
@@ -56,15 +57,7 @@ export default function Find({navigation}) {
         <View>
             <View>
                 <View style={{ backgroundColor: '#f68710', marginBottom: 10, paddingBottom: 10 }}>
-                    <Input
-                    placeholder='INPUT WITH ICON'
-                    leftIcon={
-                        <Icon
-                        name='user'
-                        size={24}
-                        color='black'
-                        />
-                    }/>
+                    <SearchInput isRadius={ true } func={ () => { req() } } color={{ backgroundColor: '#fff' }}/>
                     <View style={{ width: '100%' }}>
                         <FlatList
                         data={ [{id:1, title: '推荐' }, { id: 2, title: '旅行'}, { id: 3, title: '美食' }, {id: 4, title: '住宿' }, { id: 5, title: '景点'}] }

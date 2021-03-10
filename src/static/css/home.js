@@ -29,7 +29,7 @@ var homeCss = StyleSheet.create({
         backgroundColor: '#f2f2f2',
         borderRadius: 5,
         overflow: 'hidden',
-        elevation: 2
+        elevation: 4
     },
     search_input: {
         flex: 1,     
@@ -81,7 +81,8 @@ var homeCss = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        elevation: 2
     },
     big_title: {
         fontSize: 18,

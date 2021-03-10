@@ -34,7 +34,21 @@ import FDetailScreen from './src/view/find/findDetail';
 import TripDetailScreen from './src/view/trip/tripDetails';
 import OrderScreen from './src/view/order';
 import ReleaseScreen from './src/view/release';
+import SettingScreen from './src/view/setting/setting';
+import TicketScreen from './src/view/ticket/ticket';
+import ticketInfoScreen from './src/view/ticket/ticketInfo';
+import TicketListScreen from './src/view/ticket/ticketList';
+import TicketDetailScreen from './src/view/ticket/ticketDetail';
 import TravelScreen from './src/view/travel/travel';
+import InfoScreen from './src/view/user/info';
+import AddInfoScreen from './src/view/user/addInfo';
+import HotelScreen from './src/view/hotel/hotel';
+import HotelListScreen from './src/view/hotel/hotelList';
+import HotelDetailScreen from './src/view/hotel/hotelDetail';
+import HotelInfoScreen from './src/view/hotel/hotelInfo';
+import CityDetailScreen from './src/component/city';
+import ShowScreen from './src/view/show/show';
+import PersonalityScreen from './src/view/user/personality';
 
 const Stack = createStackNavigator();
 
@@ -57,6 +71,20 @@ export default function App() {
             backgroundColor: '#f68710',
           }, headerTintColor: '#fff', headerTitleAlign: 'center' }}></Stack.Screen>
           <Stack.Screen name="Travel" component={TravelScreen} options={{ headerShown: false }}></Stack.Screen>
+          <Stack.Screen name="Setting" component={SettingScreen} options={{ title: '设置' }}></Stack.Screen>
+          <Stack.Screen name="Ticket" component={TicketScreen} options={{ title: '' }}></Stack.Screen>
+          <Stack.Screen name="TicketList" component={TicketListScreen} options={{ title: '设置' }}></Stack.Screen>
+          <Stack.Screen name="TicketDetail" component={TicketDetailScreen} options={{ title: '车次详情', headerTitleAlign: 'center' }}></Stack.Screen>
+          <Stack.Screen name="ticketInfo" component={ticketInfoScreen} options={{ title: '填写抢票信息', headerTitleAlign: 'center' }}></Stack.Screen>
+          <Stack.Screen name="City" component={CityDetailScreen} options={{ headerShown: false }}></Stack.Screen>
+          <Stack.Screen name="Info" component={InfoScreen} options={{ title: '乘客选择', headerTitleAlign: 'center' }}></Stack.Screen>
+          <Stack.Screen name="AddInfo" component={AddInfoScreen} options={{ title: '新增乘客', headerTitleAlign: 'center' }}></Stack.Screen>
+          <Stack.Screen name="Hotel" component={HotelScreen} options={{ title: '', headerTitleAlign: 'center' }}></Stack.Screen>
+          <Stack.Screen name="HotelList" component={HotelListScreen} options={{ title: '', headerTitleAlign: 'center' }}></Stack.Screen>
+          <Stack.Screen name="HotelDetail" component={HotelDetailScreen} options={{ title: '', headerTitleAlign: 'center' }}></Stack.Screen>
+          <Stack.Screen name="HotelInfo" component={HotelInfoScreen} options={{ title: '', headerTitleAlign: 'center' }}></Stack.Screen>
+          <Stack.Screen name="Show" component={ShowScreen} options={{ title: '', headerTitleAlign: 'center' }}></Stack.Screen>
+          <Stack.Screen name="Personality" component={PersonalityScreen} options={{ title: '', headerTitleAlign: 'center' }}></Stack.Screen>
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

@@ -7,17 +7,17 @@ class home extends React.Component {
         super(prop)
         this.state = {
             menu:[
-                { title: '攻略', img: require('../static/icon/strategy.png'), routeName: '' },
+                { title: '攻略', img: require('../static/icon/strategy.png'), routeName: 'Ticket' },
                 { title: '旅游', img: require('../static/icon/scenic_spot.png'), routeName: 'Travel' },
-                { title: '美食', img: require('../static/icon/delicacy.png'), routeName: '' },
-                { title: '住宿', img: require('../static/icon/stay.png'), routeName: '' },
+                { title: '美食', img: require('../static/icon/delicacy.png'), routeName: 'Show' },
+                { title: '住宿', img: require('../static/icon/stay.png'), routeName: 'Hotel' },
                 { title: '景点·门票', img: require('../static/icon/ticket.png'), routeName: '' }
             ],
             choose: [
-                { title: '周边游', desc: '洪崖洞、千厮门大桥、两江游', img: require('../static/images/zby.jpg') },
-                { title: '跟团游', desc: '洪崖洞、千厮门大桥、两江游', img: require('../static/images/gty.jpg') },
-                { title: '定制游', desc: '洪崖洞、千厮门大桥、两江游', img: require('../static/images/dzy.jpg') },
-                { title: '自由行', desc: '洪崖洞、千厮门大桥、两江游', img: require('../static/images/zyx.jpg') }
+                { title: '周边游', desc: '洪崖洞、千厮门大桥、两江游', img: require('../static/images/zby.jpg'), routeName: '' },
+                { title: '跟团游', desc: '洪崖洞、千厮门大桥、两江游', img: require('../static/images/gty.jpg'), routeName: '' },
+                { title: '定制游', desc: '洪崖洞、千厮门大桥、两江游', img: require('../static/images/dzy.jpg'), routeName: '' },
+                { title: '自由行', desc: '洪崖洞、千厮门大桥、两江游', img: require('../static/images/zyx.jpg'), routeName: '' }
             ],
             CardList: [
                 { id: 1, title: '重庆旅游攻略', desc: '重庆美丽风景', user: { username: 'SCE林木夕' }, img: require('../static/images/rm1.jpg'), position: '重庆' },
@@ -32,7 +32,7 @@ class home extends React.Component {
     }
     renderList = ({item}) => {
         return (
-            <TouchableWithoutFeedback onPress={()=> this.jump('FDetail')}>
+            <TouchableWithoutFeedback style={{elevation: 2}} onPress={()=> this.jump('FDetail')}>
                 <View style={{ borderRadius: 16,  overflow: 'hidden', width: '48%', maxHeight: 180, marginBottom: 10, justifyContent: 'space-between' }}>
                         <View style={{ overflow: 'hidden', height: '70%' }} ><Image width="100%" resizeMode="contain"  source={ item.img }/></View> 
                         <View style={{ paddingLeft: 8, paddingRight: 8, }}>

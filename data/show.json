@@ -1,0 +1,98 @@
+{
+    "show1": {
+        "list": [
+            {
+                "img": "/src/static/images",
+                "title": "重庆特大漫展",
+                "price": 20,
+                "type": "漫展",
+                "score": 4.3,
+                "address": "重庆市龙湖时代天街",
+                "images": [
+
+                ]
+            },
+            {
+                "img": "/src/static/images",
+                "title": "重庆航空航天",
+                "price": 30,
+                "type": "航天展",
+                "score": 4.6,
+                "address": "重庆市龙湖时代天街",
+                "images": [
+
+                ]
+            },
+            {
+                "img": "/src/static/images",
+                "title": "重庆航空航天",
+                "price": 30,
+                "type": "航天展",
+                "score": 4.6,
+                "address": "重庆市龙湖时代天街",
+                "images": [
+
+                ]
+            },
+            {
+                "img": "/src/static/images",
+                "title": "重庆航空航天",
+                "price": 30,
+                "type": "航天展",
+                "score": 4.6,
+                "address": "重庆市龙湖时代天街",
+                "images": [
+
+                ]
+            }
+        ]
+    },
+    "show2": {
+        "list": [
+            {
+                "img": "/src/static/images",
+                "title": "鲤鱼灯表演",
+                "price": 21,
+                "type": "传统文化",
+                "score": 4.6,
+                "address": "重庆市龙湖时代天街",
+                "images": [
+
+                ]
+            },
+            {
+                "img": "/src/static/images",
+                "title": "川剧表演",
+                "price": 32,
+                "type": "国粹",
+                "score": 4.8,
+                "address": "重庆市龙湖时代天街",
+                "images": [
+
+                ]
+            },
+            {
+                "img": "/src/static/images",
+                "title": "舞狮子",
+                "price": 18,
+                "type": "传统文化",
+                "score": 4.4,
+                "address": "重庆市龙湖时代天街",
+                "images": [
+
+                ]
+            },
+            {
+                "img": "/src/static/images",
+                "title": "传统经典相声",
+                "price": 42,
+                "type": "国粹",
+                "score": 4.7,
+                "address": "重庆市龙湖时代天街",
+                "images": [
+
+                ]
+            }
+        ]
+    }
+}

@@ -1,9 +1,36 @@
 import React from 'react';
 import { StyleSheet, View, Text, TextInput, FlatList, ImageBackground, Image } from 'react-native';
+import Swiper from 'react-native-swiper';
 
 const traCss = StyleSheet.create({
+    banner: {
+        backgroundColor: '#fff'
+    },  
+    banner_item: {
+        height: '100%',
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-end'
+    },
+    banner_text_bg: {
+        height: '40%',
+        width: '100%',
+        backgroundColor: 'rgba(8, 8, 8, .4)',
+        paddingLeft: '5%',
+        paddingRight: '5%'
+    },
+    desc: {
+        color: '#fff',
+        fontSize: 14
+    },
+    desc_tag: {
+        color: '#f68710',
+        fontSize: 16,
+        marginLeft: 8
+    },  
     bg: {
-        height: '28%',
+        height: '24%',
         marginBottom: 10
     },
     mune_box: {
@@ -40,7 +67,7 @@ const traCss = StyleSheet.create({
         width: 120
     }
 })
-
+const title = "青海湖+茶卡盐湖+德令哈+敦煌莫高窟+鸣 沙山月牙泉+张掖七彩丹1231231"
 const mune = [
     { title: '一日游', img: require('../../static/icon/yry.jpg') },
     { title: '周边游', img: require('../../static/icon/yry.jpg') },
@@ -57,6 +84,10 @@ function renderTravelList ({ item }) {
     return (
         <View style={ traCss.travel_list_item }>
             <Image style={ traCss.travel_list_item_img } resizeMode="cover" source={ item.img }/>
+            <View>
+                <Text>{ item.title }</Text>
+                {/* <Tag color/> */}
+            </View>
         </View>
     )
 }
@@ -64,9 +95,18 @@ function renderTravelList ({ item }) {
 export default function Travel () {
     return (
         <View style={{ height: '100%' }}>
-            <ImageBackground style={ traCss.bg }>
-
-            </ImageBackground>
+            <View style={ traCss.bg }>
+                <Swiper height={ 200 } style={ traCss.banner } autoplay={ true }>
+                    <ImageBackground style={ traCss.banner_item } source={require('../../static/images/sy.jpg')}>
+                        <View style={ traCss.banner_text_bg }>
+                            <Text style={ traCss.desc }><Text style={ traCss.desc_tag }>双飞9日</Text> {title ? (title.length > 32 ? title.substr(0, 32) + "..." : title) : ""}</Text>
+                        </View>
+                    </ImageBackground>
+                    <View>
+                        <Text>222</Text>
+                    </View>
+                </Swiper>
+            </View>
             <View style={ traCss.mune_box }>
             {
                 mune.map( data => {
